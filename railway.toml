@@ -1,0 +1,11 @@
+[build]
+builder = "nixpacks"
+
+[deploy]
+startCommand = "uvx excel-mcp-server streamable-http"
+healthcheckPath = "/health"
+healthcheckTimeout = 300
+
+[env]
+EXCEL_FILES_PATH = "/app/excel_files"
+FASTMCP_PORT = "8000"
