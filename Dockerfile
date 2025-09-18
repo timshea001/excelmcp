@@ -11,8 +11,8 @@ COPY . .
 # Create excel_files directory
 RUN mkdir -p /app/excel_files
 
-# Install dependencies
-RUN uv pip install --system .
+# Install dependencies directly from PyPI instead of building from source
+RUN uv pip install --system excel-mcp-server==0.1.7
 
 # Expose port
 EXPOSE 8000
